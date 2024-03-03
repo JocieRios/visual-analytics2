@@ -1,0 +1,10 @@
+#Loading libraries
+library(ggplot2)
+
+# Creating basic scatter plot for correlation analysis
+# (including line of best fit to represent regression)
+theme_classic()
+
+ggplot(mtcars, aes(hp, mpg)) + theme_bw() + geom_point(color="cyan") +
+  stat_smooth(method="lm", color="lightblue") + 
+  labs(x="Horsepower", y="Miles per Gallon", title="Horsepower vs. MPG")
